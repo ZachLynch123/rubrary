@@ -13,8 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_10_17_185831) do
 
   create_table "authors", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -22,8 +21,12 @@ ActiveRecord::Schema.define(version: 2020_10_17_185831) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "description"
+    t.integer "author_id"
+    t.integer "genre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["author_id"], name: "index_books_on_author_id"
+    t.index ["genre_id"], name: "index_books_on_genre_id"
   end
 
   create_table "genres", force: :cascade do |t|

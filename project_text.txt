@@ -7,17 +7,18 @@ User functionality:
     - ApplicationController will handle logins
 
 Models:
-    Author
-    - has_many :books
-    - has_many :genres , through: :books
+    
+    book
+    belongs_to :author 
+    belongs_to :genre
 
-    Genre
-    - belongs_to :author
-    - belongs_to :book
+    gerne 
+    has_many :books 
+    has_many :authors, throgh: :books
 
-    Book
-    - belongs_to :author
-    - has_many :genres, through: :author
+    author 
+    has_many :books 
+    has_many :genres, through: :books
 
 Views
     Root
@@ -33,7 +34,7 @@ Views
     Book 
     - index of all Books with links to their show page allow to be ordered by either genre or alphabetise <-- main view after login. So add ability to view, add, edit, delete, and sign out here -->
     - show page will have genre and author 
-    - new page will have form to create a new book. Requires author and genre 
+    - new page will have form to create a new book. Requires author and genre. if author or genre not found, create them as well 
     - edit page will have form to edit book
 
     Genre 
