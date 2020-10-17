@@ -1,0 +1,66 @@
+Ruby final project idea: Book library, User will be the Admin of Rubrary, creating, editing and checking out (deleting) deleting books from the site
+User functionality: 
+
+    - user will be able to sign in using OAuth or by entering email
+    - User will be able to add books and authors. User will be able to sort by genre using ActiveRecord Query methods (.where)
+    - user can enter in book titles, authors, and genres of books.
+    - ApplicationController will handle logins
+
+Models:
+    Author
+    - has_many :books
+    - has_many :genres , through: :books
+
+    Genre
+    - belongs_to :author
+    - belongs_to :book
+
+    Book
+    - belongs_to :author
+    - has_many :genres, through: :author
+
+Views
+    Root
+    - Sign up page 
+    - Login page 
+    - after successful login: give choice of books, author, or genre. links to each. button to add new book and button to logout 
+
+
+    Author 
+    - index of all authors with links to their show page
+    - show page will have all their books with a way to order by genre or alphabetise
+    
+    Book 
+    - index of all Books with links to their show page allow to be ordered by either genre or alphabetise <-- main view after login. So add ability to view, add, edit, delete, and sign out here -->
+    - show page will have genre and author 
+    - new page will have form to create a new book. Requires author and genre 
+    - edit page will have form to edit book
+
+    Genre 
+    - Index will show all gernes 
+    - show page will have all books or authors under that particular genre with a link to their page 
+
+Controllers 
+
+    Application 
+    - show a login/sign up page and allow OAuth logins
+    - saves session 
+
+    Author 
+    - index to find all authors 
+    - show to load a specific author and all data associated with them 
+    
+    Book 
+    - index to find all books, 
+    - show to load specific book 
+    - edit to edit book 
+    - delete to delete the book 
+
+    Genre 
+    - index all genres 
+    - show all authors or books associated with genre with links to either 
+
+
+Things to remember: 
+include and make use of a nested resource with the appropriate RESTful URLs. forms should correctly display validation errors.
+sat-sun work on project
