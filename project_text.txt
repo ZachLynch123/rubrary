@@ -1,8 +1,9 @@
-Ruby final project idea: Book library, User will be the Admin of Rubrary, creating, editing and checking out (deleting) deleting books from the site
+Ruby final project idea: Book library, User will be the Admin of their own Rubrary, creating, editing and checking out (deleting) books from their collection
+
 User functionality: 
 
     - user will be able to sign in using OAuth or by entering email
-    - User will be able to add books and authors. User will be able to sort by genre using ActiveRecord Query methods (.where)
+    - User will be able to add books. User will be able to sort by genre using ActiveRecord Query methods (.where)
     - user can enter in book titles, authors, and genres of books.
     - ApplicationController will handle logins
 
@@ -16,7 +17,7 @@ Models:
     has_many :books 
     has_many :authors, throgh: :books
 
-    author 
+    user 
     has_many :books 
     has_many :genres, through: :books
 
@@ -24,12 +25,11 @@ Views
     Root
     - Sign up page 
     - Login page 
+    - a
+
+
+    User 
     - after successful login: give choice of books, author, or genre. links to each. button to add new book and button to logout 
-
-
-    Author 
-    - index of all authors with links to their show page
-    - show page will have all their books with a way to order by genre or alphabetise
     
     Book 
     - index of all Books with links to their show page allow to be ordered by either genre or alphabetise <-- main view after login. So add ability to view, add, edit, delete, and sign out here -->
@@ -46,10 +46,10 @@ Controllers
     Application 
     - show a login/sign up page and allow OAuth logins
     - saves session 
+    - deletes session on logout
 
-    Author 
-    - index to find all authors 
-    - show to load a specific author and all data associated with them 
+    User 
+    - create new book
     
     Book 
     - index to find all books, 
