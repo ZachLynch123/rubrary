@@ -7,17 +7,17 @@ User functionality:
     - user can enter in book titles, authors, and genres of books.
     - ApplicationController will handle logins
 
-Models:
+x Models:
     
-    book
+   x book
     belongs_to :author 
     belongs_to :genre
 
-    gerne 
+   x gerne 
     has_many :books 
     has_many :authors, throgh: :books
 
-    user 
+   x user 
     has_many :books 
     has_many :genres, through: :books
 
@@ -25,7 +25,6 @@ Views
     Root
     - Sign up page 
     - Login page 
-    - a
 
 
     User 
@@ -43,7 +42,7 @@ Views
 
 Controllers 
 
-    Application 
+    Application <-- do this next
     - show a login/sign up page and allow OAuth logins
     - saves session 
     - deletes session on logout
@@ -64,4 +63,4 @@ Controllers
 
 Things to remember: 
 include and make use of a nested resource with the appropriate RESTful URLs. forms should correctly display validation errors.
-sat-sun work on project
+sat-sun work on project nested routes are going to be a show page for all the books the user added and a new for where the user creates the book
