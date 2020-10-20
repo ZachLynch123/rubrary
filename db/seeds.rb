@@ -7,5 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create(email: 'a@gmail.com', password: 'password')
-genre = Genre.create(genre_name: 'Horror')
+favorite = Favorite.create(is_favorite: true)
+
+book = Book.create(title: 'it', description: 'this is it', user_id: user.id, favorite_id: favorite.id)
 

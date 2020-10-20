@@ -1,3 +1,3 @@
-class Genre < ApplicationRecord
+class Favorite < ApplicationRecord
     has_many :books 
 end
