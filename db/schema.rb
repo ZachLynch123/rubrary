@@ -16,15 +16,15 @@ ActiveRecord::Schema.define(version: 2020_10_17_194234) do
     t.string "title"
     t.string "description"
     t.integer "user_id"
-    t.integer "genre_id"
+    t.integer "favorite_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["genre_id"], name: "index_books_on_genre_id"
+    t.index ["favorite_id"], name: "index_books_on_favorite_id"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
-  create_table "genres", force: :cascade do |t|
-    t.string "genre_name"
+  create_table "favorites", force: :cascade do |t|
+    t.boolean "is_favorite"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

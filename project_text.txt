@@ -11,15 +11,16 @@ x Models:
     
    x book
     belongs_to :author 
-    belongs_to :genre
+    belongs_to :favorites
 
-   x gerne 
-    has_many :books 
-    has_many :authors, throgh: :books
+   x favorites
+   has_many :books 
+   has_many :users, through: books
+
 
    x user 
     has_many :books 
-    has_many :genres, through: :books
+    has_many :favorites, through: :books
 
 Views
     Root

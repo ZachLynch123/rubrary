@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :description
       t.belongs_to :user
-      t.belongs_to :genre
+      t.belongs_to :favorite
       t.timestamps
     end
   end
