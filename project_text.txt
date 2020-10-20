@@ -59,9 +59,17 @@ Controllers
 
     Genre 
     - index all genres 
-    - show all authors or books associated with genre with links to either 
+    - show all authors or bookss associated with genre with links to either 
 
 
 Things to remember: 
 include and make use of a nested resource with the appropriate RESTful URLs. forms should correctly display validation errors.
 sat-sun work on project nested routes are going to be a show page for all the books the user added and a new for where the user creates the book
+
+
+To-Do 
+
+-standard user authentication
+-OAuth logins 
+-nested route to view all user's favorite books (/users/:id/books) returns all books .WHERE -favorites = true 
+-form validations and displaying validation errors
