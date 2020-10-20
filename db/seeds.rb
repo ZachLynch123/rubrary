@@ -8,6 +8,8 @@
 
 user = User.create(email: 'a@gmail.com', password: 'password')
 favorite = Favorite.create(is_favorite: true)
+favorite2 = Favorite.create(is_favorite: false)
 
 book = Book.create(title: 'it', description: 'this is it', user_id: user.id, favorite_id: favorite.id)
 
+book2 = Book.create(title: 'Dune', description: 'the book, the movie, then the movie again', user_id: user.id, favorite_id: favorite2.id)
