@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  #session
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  post '/logout', to: 'session#destroy'
+
+  #books
   get '/books', to: 'books#index', as: 'books' 
   get '/books/:id', to: 'books#show', as: 'book'
   get '/books/new', to: 'books#new', as: 'new_book'
