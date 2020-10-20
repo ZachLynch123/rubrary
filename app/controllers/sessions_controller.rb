@@ -9,4 +9,9 @@ class SessionsController < ApplicationController
         redirect_to '/user/:id'
     end
 
+    def destroy
+        session.delete :email 
+        session.delete :user_id
+    end
+
 end
