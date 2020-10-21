@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController 
 
     def new 
+        render :signup
     end
 
     def create 
