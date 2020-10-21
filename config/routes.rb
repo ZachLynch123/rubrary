@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
   #books
   get '/books', to: 'books#index', as: 'books' 
-  get '/books/:id', to: 'books#show', as: 'book'
-  get '/books/new', to: 'books#new', as: 'new_book'
+  get '/book/new', to: 'books#new', as: 'new_book'
+  get '/book/:id', to: 'books#show', as: 'book'
   post '/books', to: 'books#create'
   get '/books/:id/edit', to: 'items#edit', as: 'edit_book'
   patch '/books/:id', to: 'books#update'

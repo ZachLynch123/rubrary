@@ -1,5 +1,7 @@
-<ul>
+<%= link_to "Add a book", "/book/new"%>
+
+<ol>
     <% @books.each do |book|%>
-        <li><%= book.title%></li>
+        <%= link_to "#{book.title}", book%>
     <%end%>
-</ul>
+</ol>
