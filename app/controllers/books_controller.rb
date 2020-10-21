@@ -12,7 +12,8 @@ class BooksController < ApplicationController
   end
 
   def create
-    Book.create(book_params)
+    puts params
+    @book = Book.create(book_params)
     redirect_to books_path
   end
 
