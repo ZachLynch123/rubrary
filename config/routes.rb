@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   post '/logout', to: 'session#destroy'
-  resources :users, only: [:create, :show]
+  
 
   #books
   get '/books', to: 'books#index', as: 'books' 
