@@ -1,7 +1,7 @@
-<%= form_with url: sessions_path, local: true do |f|%>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-    <%= f.label :password %>
-    <%= f.text_field :password %>
-    <%= f.submit%>
+<%= form_tag login_path do %>
+    <%= label_tag "Email" %>
+    <%= text_field_tag :email %>
+    <%= label_tag "Password" %>
+    <%= text_field_tag :password %>
+    <%= submit_tag "Submit" %>
 <% end %>

@@ -5,15 +5,16 @@ class SessionsController < ApplicationController
 
     def create 
         # auth
-        byebug
+        
 
         @user = User.find_by(email: params[:email])
+        auth = @user.authenticate(params[:password])
+        byebug
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
             redirect_to @user
         else 
-            byebug
-            render login_path
+            render :new
         end
 
     end
