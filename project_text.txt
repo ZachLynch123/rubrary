@@ -69,7 +69,7 @@ sat-sun work on project nested routes are going to be a show page for all the bo
 
 To-Do 
 
--standard user authentication
+xstandard user authentication
 -OAuth logins 
 -nested route to view all user's favorite books (/users/:id/books) returns all books .WHERE -favorites = true 
 -form validations and displaying validation errors

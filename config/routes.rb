@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get '/', to: 'application#index'
   resources :users, only: [:show]
   #logins
   get '/signup', to: 'users#new', as: 'signup'
