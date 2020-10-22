@@ -16,15 +16,24 @@ class UsersController < ApplicationController
     end
 
     def show 
-        @user = User.find(params[:id])
+        @user = find_user
         byebug
+    end
 
+    def books_index
+        @user = find_user
+        @books = @user.books 
+        render template:'books/index'
     end
 
 
 
 
     private 
+
+    def find_user
+        User.find(params[:id])
+    end
 
     def user_params 
         params.permit(:email, :password)

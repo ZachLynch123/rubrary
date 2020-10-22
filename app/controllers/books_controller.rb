@@ -12,8 +12,8 @@ class BooksController < ApplicationController
   end
 
   def create
-    puts params
-    @book = Book.create(book_params)
+    @book = Book.create(book_params, session[:user_id])
+    byebug
     redirect_to books_path
   end
 
@@ -38,7 +38,7 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    return params.require(:book).permit(:title, :description)
+    book_params = params.require(:book).permit(:title, :description)
   end
 
 
