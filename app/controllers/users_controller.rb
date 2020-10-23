@@ -19,13 +19,6 @@ class UsersController < ApplicationController
         @user = find_user
     end
 
-    def books_index
-        @user = find_user
-        @books = @user.books 
-        render template:'books/index'
-    end
-
-
 
 
     private 
