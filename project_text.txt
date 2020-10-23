@@ -68,6 +68,10 @@ sat-sun work on project nested routes are going to be a show page for all the bo
 
 
 To-Do 
+EACH USER CAN ADD BOOKS BUT WONT BE ASSOCIATED WITH BOOK UNTIL THEY COMMENT 
+comment inded route /user/:id/comment 
+comment show route /user/:id/book/:id 
+comment new route /book/:id/comment/new
 
 xstandard user authentication
 o Check OAuth logins, give github like a day to validate the application  
