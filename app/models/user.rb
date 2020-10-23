@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
     def self.find_or_create_by_omniauth(auth_hash)
 
-        auth_email = request.env["omniauth.auth"]["info"]["email"]
+        auth_email = auth_hash["omniauth.auth"]["info"]["email"]
 
         if user = User.find_by(:email => auth_email)
             session[:user_id] = user.id 
@@ -20,4 +20,6 @@ class User < ApplicationRecord
                 raise user.errors.full_message.inspect 
             end
         end
+    end
+
 end
