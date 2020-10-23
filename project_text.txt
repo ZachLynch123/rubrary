@@ -74,7 +74,7 @@ comment show route /user/:id/book/:id
 comment new route /book/:id/comment/new
 
 xstandard user authentication
-o Check OAuth logins, give github like a day to validate the application  
-- May need to refactor the project. Take out favorites and put in comments/reviews. 
--nested route to view all user's favorite books (/users/:id/books) returns all books .WHERE -favorites = true 
+x Check OAuth logins, give github like a day to validate the application  
+x May need to refactor the project. Take out favorites and put in comments/reviews. 
+-nested route to view comments for specific books returns all books .WHERE -favorites = true 
 -form validations and displaying validation errors
