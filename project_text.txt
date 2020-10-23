@@ -76,5 +76,6 @@ comment new route /book/:id/comment/new
 xstandard user authentication
 x Check OAuth logins, give github like a day to validate the application  
 x May need to refactor the project. Take out favorites and put in comments/reviews. 
--nested route to view comments for specific books returns all books .WHERE -favorites = true 
+X nested route to view comments for specific books r
 -form validations and displaying validation errors
+-logout button

@@ -13,10 +13,9 @@ class CommentsController < ApplicationController
         @comment = current_user.comments.build(comment_params)
         
         if @comment.save
-            byebug
-            redirect_to new_book_comment_path(params[:book_id])
-        else 
             redirect_to current_user
+        else 
+            redirect_to new_book_comment_path(params[:book_id])
         end
     end
 
