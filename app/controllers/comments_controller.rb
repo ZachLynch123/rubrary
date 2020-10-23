@@ -2,16 +2,22 @@ class CommentsController < ApplicationController
 
 
     def index 
+        byebug
         @comments = Comment.where(book_id: params[:book_id])
     end
 
     def new 
-        comment = Comment.new
+        @comments = current_user.comments.build
     end
 
     def create 
-        comment = current_user.comments.create(comment_params)
-        redirect_to current_user
+        @comment = current_user.comments.build(comment_params)
+        byebug
+        if @comment.save
+            redirect_to new_book_comment_path(params[:book_id])
+        else 
+            redirect_to current_user
+        end
     end
 
     private 
