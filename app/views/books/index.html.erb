@@ -2,6 +2,6 @@
 
 <ol>
     <% @books.each do |book|%>
-        <%= link_to "#{book.title}", book%> <br>
+        <%= link_to "#{book.title}", book%> - <%= link_to "Add a comment",new_book_comment_path(book.id)%> - <%= link_to "view comments", book_comments_path(book.id)%><br>
     <%end%>
 </ol>

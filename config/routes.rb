@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   resources :books
 
   resources :books do 
-    resources :comments
+    resources :comments 
+    post '/comments/new', to: 'comments#create'
   end
 
 
