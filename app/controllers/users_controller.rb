@@ -17,7 +17,6 @@ class UsersController < ApplicationController
 
     def show 
         @user = find_user
-        byebug
     end
 
     def books_index
