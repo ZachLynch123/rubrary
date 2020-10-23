@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-    has_secure_password
-    
     has_many :books 
-    has_many :favorites, through: :books
+    has_many :comments, through: :books
+
+    has_secure_password
 
     
 end

@@ -16,17 +16,19 @@ ActiveRecord::Schema.define(version: 2020_10_17_194234) do
     t.string "title"
     t.string "description"
     t.integer "user_id"
-    t.integer "favorite_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["favorite_id"], name: "index_books_on_favorite_id"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.boolean "is_favorite"
+  create_table "comments", force: :cascade do |t|
+    t.string "comment_text"
+    t.integer "user_id"
+    t.integer "book_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_comments_on_book_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

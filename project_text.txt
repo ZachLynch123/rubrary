@@ -70,6 +70,7 @@ sat-sun work on project nested routes are going to be a show page for all the bo
 To-Do 
 
 xstandard user authentication
--OAuth logins 
+o Check OAuth logins, give github like a day to validate the application  
+- May need to refactor the project. Take out favorites and put in comments/reviews. 
 -nested route to view all user's favorite books (/users/:id/books) returns all books .WHERE -favorites = true 
 -form validations and displaying validation errors

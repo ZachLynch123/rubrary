@@ -1,4 +1,4 @@
 class Book < ApplicationRecord
     belongs_to :user 
-    belongs_to :favorite
+    has_many :comments, through: :users
 end
