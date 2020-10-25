@@ -1,24 +1,26 @@
-# README
+# rails Rubrary Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MVC application that lets users sign up or login using oauth to add books to a library of books. Users can then add comments to said books
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Clone the code to the desired destination or download the zip directly then run
+```
+bundle install
+```
 
-* System dependencies
+## Usage
 
-* Configuration
+In the terminal run
+``` 
+rails s or rails server
+```
+Then follow the link to view and use the web page.
 
-* Database creation
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* Database initialization
+Please make sure to update tests as appropriate.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
