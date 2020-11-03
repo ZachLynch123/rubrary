@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+    before_action :logged_in?
 
 
     def index 
@@ -24,6 +25,10 @@ class CommentsController < ApplicationController
     def comment_params 
 
         x = params.permit(:comment_text, :book_id)
+    end
+
+    def logged_in?
+        return head(:forbidden) unless session.include? :user_id
     end
 
 

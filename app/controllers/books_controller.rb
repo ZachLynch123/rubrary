@@ -45,7 +45,7 @@ class BooksController < ApplicationController
 
   def logged_in?
     return head(:forbidden) unless session.include? :user_id
-    end
+  end
 
 
 end
