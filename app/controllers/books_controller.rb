@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+
+  before_action :logged_in?
+
   def index
     @books = Book.all 
   end
@@ -39,6 +42,10 @@ class BooksController < ApplicationController
   def book_params
     book_params = params.require(:book).permit(:title, :description)
   end
+
+  def logged_in?
+    return head(:forbidden) unless session.include? :user_id
+    end
 
 
 end
