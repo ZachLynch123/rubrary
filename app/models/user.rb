@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
     validates :email, presence: true
     # Validates that email is unique and has an '@' sign in it
-    validates :email,format: { with: /(.+)@(.+)/, message: "Email invalid"  }
+    validates :email,format: { with: /(.+)@(.+)/, message: "Email invalid"  },
+        uniqueness: { case_sensitive: false }
     
 end
