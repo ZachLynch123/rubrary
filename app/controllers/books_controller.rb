@@ -3,7 +3,14 @@ class BooksController < ApplicationController
   before_action :logged_in?
 
   def index
-    @books = Book.all 
+    if params[:user_id]
+      byebug
+      @books = User.find_by_id(params[:user_id]).books
+
+    else
+      @books = Book.all.sort_desc
+    end
+
   end
 
   def show
