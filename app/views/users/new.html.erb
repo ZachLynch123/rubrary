@@ -1,12 +1,12 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <h2>
-      <%= pluralize(@users.errors.count, "error") %>
+      <%= pluralize(@user.errors.count, "error") %>
       cannot save due to:
     </h2>
 
     <ul>
-    <% @users.errors.full_messages.each do |msg| %>
+    <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>
